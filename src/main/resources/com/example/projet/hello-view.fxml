@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.BorderPane?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet.HelloController" fx:id="rootPane">
+
+    <!-- Le StackPane pour contenir l'image de fond et l'image chargée -->
+    <StackPane fx:id="imageStackPane" alignment="CENTER">
+
+        <!-- Image de fond -->
+        <ImageView fx:id="backgroundImage" preserveRatio="false" />
+
+        <!-- Contenu au-dessus -->
+        <VBox spacing="80" alignment="CENTER">
+            <!-- L'image qui sera affichée -->
+            <ImageView fx:id="loadedImage" fitWidth="400" fitHeight="400" preserveRatio="true"/>
+        </VBox>
+    </StackPane>
+
+    <!-- Le bouton de rotation dans le AnchorPane -->
+    <StackPane fx:id="buttonPane" alignment="CENTER">
+        <VBox spacing="10" >
+            <padding>
+                <Insets left="10" top="10" right="10" bottom="10"></Insets>
+            </padding>
+
+            <HBox spacing="20">
+
+                <!-- Le bouton "Charger une image" au centre -->
+                <Button fx:id="loadButton" text="Charger une image"
+                        prefWidth="130"
+                        style="-fx-background-color: #2ecc71;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"
+                        onAction="#handleLoadImage"/>
+
+                <Button fx:id="recherche" text="Rechercher" prefWidth="90" onAction="#handleImageSearch"
+                        style="-fx-background-color: #3498db;
+                   -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+                <TextField fx:id="tagInputField" promptText="Écrire un tag" HBox.hgrow="ALWAYS"
+                           prefWidth="200"
+                           style="-fx-background-radius: 5; -fx-padding: 5;"/>
+
+                <Button fx:id="newTag" text="Nouveau tag" onAction="#nouveauTag" HBox.hgrow="ALWAYS"
+                        prefWidth="100"
+                        style="-fx-background-color: #3498db;
+                   -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+                <Button fx:id="deleteTagButton" text="Supprimer Tag" onAction="#handleDeleteTag"
+                        HBox.hgrow="ALWAYS" prefWidth="100"
+                        style="-fx-background-color: #3498db;
+                   -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"
+                />
+
+                <Button fx:id="addTagButton" text="Tagger &amp; Enregistrer" HBox.hgrow="ALWAYS"
+                        onAction="#handleAddTag"
+                        prefWidth="150"
+                        style="-fx-background-color: #3498db;
+                   -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+
+            </HBox>
+
+            <Button fx:id="rotateButton" text="Rotation" onAction="#handleRotateImage" prefWidth="80"
+                    style="-fx-background-color: #3498db;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+
+            <Button fx:id="symmetryButton" text="Symetrie" onAction="#handleSymmetry" prefWidth="80"
+                    style="-fx-background-color:#3498db;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+            <Button fx:id="horizontalsymmetryButton" text="Symétrie H" onAction="#handleHorizontalSymmetry" prefWidth="90"
+                    style="-fx-background-color:#85c1e9;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+            <!--symertie verticale-->
+            <Button fx:id="verticalSymmetryButton" text="Symétrie V" onAction="#handleVerticalSymmetry" prefWidth="90"
+                    style="-fx-background-color:#85c1e9;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+            <Button fx:id="filtreButton" text="Filtre" onAction="#handleFiltre" prefWidth="80"
+                    style="-fx-background-color:#3498db;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+
+            <Button fx:id="sepiaButton" text="Sépia"  onAction="#handleSepia" prefWidth="90"
+                    style="-fx-background-color:#85c1e9;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+            <Button fx:id="grayscaleButton" text="Noir &amp; Blanc"  onAction="#handleGrayscale" prefWidth="90"
+                    style="-fx-background-color:#85c1e9;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+            <Button fx:id="swapRGBButton" text="Inverser RGB"  onAction="#handleSwapRGB" prefWidth="90"
+                    style="-fx-background-color:#85c1e9;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+            <Button fx:id="sobelButton" text="Sobel"  onAction="#handleSobel" prefWidth="90"
+                    style="-fx-background-color:#85c1e9;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+            <Button fx:id="scrambleButton" text="Crypter"
+                    prefWidth="80"
+                    style="-fx-background-color: #3498db;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"
+            />
+            <Button fx:id="decrambleButton" text="Decrypter"
+            prefWidth="80"
+            style="-fx-background-color: #3498db;
+            -fx-text-fill: black;
+            -fx-border-width: 2px;
+            -fx-background-radius: 5;
+            -fx-border-radius: 5;
+            -fx-border-color: #aaaaaa;"
+            />
+
+            <Button fx:id="undoButton" text="Annuler"  onAction="#handleUndo" prefWidth="80"
+                    style="-fx-background-color: #e74c3c;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+            <Button fx:id="redoButton" text="Rétablir" onAction="#handleRedo" prefWidth="80"
+                    style="-fx-background-color: #604080;
+               -fx-text-fill: black;
+               -fx-border-width: 2px;
+               -fx-background-radius: 5;
+               -fx-border-radius: 5;
+               -fx-border-color: #aaaaaa;"/>
+
+
+
+
+
+        </VBox>
+
+
+
+
+
+
+
+    </StackPane>
+
+
+
+</StackPane>
