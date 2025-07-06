@@ -72,18 +72,9 @@ Projet/ <br>
 ├── mvnw / mvnw.cmd                   ← Scripts Maven Wrapper <br>
 └── README.md                         ← Fichier de documentation <br>
 
-
-### 🧠 Base de données embarquée
-
-- 📄 Stockage des métadonnées :
-  - Nom des fichiers
-  - Filtres appliqués
-  - Tags utilisateurs
-- 🧱 Intégration avec Apache Derby (mode embarqué)
-
 🖼️ Aperçu
 
 
-
+# ![Fatimatou](https://)
 
 
