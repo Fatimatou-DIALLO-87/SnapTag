@@ -77,4 +77,10 @@ Projet/ <br>
 
 # ![Fatimatou](https://github.com/Fatimatou-DIALLO-87/SnapTag/blob/master/Snaptag.gif)
 
+## 🧰 Technologies utilisées
+
+- **Java 22**
+- **JavaFX + FXML + CSS**
+- **Apache Derby** (base de données)
+
 
