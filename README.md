@@ -72,9 +72,9 @@ Projet/ <br>
 ├── mvnw / mvnw.cmd                   ← Scripts Maven Wrapper <br>
 └── README.md                         ← Fichier de documentation <br>
 
-🖼️ Aperçu
+## 🖼️ Aperçu
 
 
-# ![Fatimatou](https://)
+# ![Fatimatou](https://github.com/Fatimatou-DIALLO-87/SnapTag/blob/master/Snaptag.gif)
 
 
