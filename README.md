@@ -74,9 +74,8 @@ Projet/ <br>
 
 ## 🖼️ Aperçu
 
-<p align = center >
-  <img src="https://github.com/Fatimatou-DIALLO-87/SnapTag/blob/master/Snaptag.gif" width="500">
-</p>
+# ![Fatimatou](https://github.com/Fatimatou-DIALLO-87/SnapTag/blob/master/Snaptag.gif)
+
 
 ## 🧰 Technologies utilisées
 
